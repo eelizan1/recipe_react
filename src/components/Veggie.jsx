@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Veggie() {
-  return (
-    <div></div>
-  )
+  return <div></div>;
 }
 
-export default Veggie
+export default Veggie;
