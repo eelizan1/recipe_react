@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { Link } from "react-router-dom";
 
 function Popular() {
   // 3. Hold the data in the component sate
@@ -36,7 +37,7 @@ function Popular() {
 
   return (
     <div>
-      {/* go through each recipe object and output the title */}
+      {/* 4. go through each recipe object and output the title */}
       <Wrapper>
         <h3>Popular Picks</h3>
 
@@ -46,16 +47,18 @@ function Popular() {
             arrows: false,
             pagination: false,
             drag: "free",
-            gap: "5rem",
+            gap: "2rem",
           }}
         >
           {popular.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
-                  <p>{recipe.title}</p>
-                  <img src={recipe.image} alt={recipe.title} />
-                  <Gradient />
+                  <Link to={"/recipe/" + recipe.id}>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt={recipe.title} />
+                    <Gradient />
+                  </Link>
                 </Card>
               </SplideSlide>
             );
