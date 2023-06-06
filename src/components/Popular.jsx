@@ -40,7 +40,6 @@ function Popular() {
       {/* 4. go through each recipe object and output the title */}
       <Wrapper>
         <h3>Popular Picks</h3>
-
         <Splide
           options={{
             perPage: 4,
