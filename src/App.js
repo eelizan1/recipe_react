@@ -15,6 +15,7 @@ function App() {
         </Nav>
         <Search />
         <Category />
+        {/* all the routing will be here in Pages  */}
         <Pages />
       </BrowserRouter>
     </div>
